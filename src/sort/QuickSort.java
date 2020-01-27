@@ -21,7 +21,7 @@ public class QuickSort extends SortBase {
         int left = start;
         int right = end;
         while (left != right) {
-            if (order.equals(SortBase.ASC)) {
+            if (order.equals(ASC)) {
                 while (left < right && a[right] >= pivot) {
                     right--;
                 }
@@ -30,7 +30,7 @@ public class QuickSort extends SortBase {
                 }
             }
 
-            if (order.equals(SortBase.DESC)) {
+            if (order.equals(DESC)) {
                 while (left < right && a[right] <= pivot) {
                     right--;
                 }

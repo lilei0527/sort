@@ -14,57 +14,57 @@ public class SortTest {
         int[] a8 = Arrays.copyOf(a1, a1.length);
         int[] a9 = Arrays.copyOf(a1, a1.length);
 
-        Sort quickSort = new QuickSort();
-        quickSort.sort(a1, SortBase.DESC);
+        sort.Sort quickSort = new sort.QuickSort();
+        quickSort.sort(a1, sort.SortBase.DESC);
 
-        Sort bubbleSort = new BubbleSort();
+        sort.Sort bubbleSort = new sort.BubbleSort();
         bubbleSort.sort(a2);
 
-        Sort selectionSort = new SelectionSort();
+        sort.Sort selectionSort = new sort.SelectionSort();
         selectionSort.sort(a3);
 
-        Sort insertSort = new InsertSort();
-        insertSort.sort(a4, SortBase.DESC);
+        sort.Sort insertSort = new sort.InsertSort();
+        insertSort.sort(a4, sort.SortBase.DESC);
 
-        Sort shellSort = new ShellSort();
+        sort.Sort shellSort = new sort.ShellSort();
         shellSort.sort(a5);
 
-        Sort mergeSort = new MergeSort();
-        mergeSort.sort(a6, SortBase.DESC);
+        sort.Sort mergeSort = new sort.MergeSort();
+        mergeSort.sort(a6, sort.SortBase.DESC);
 
-        Sort heapSort = new HeapSort();
-        heapSort.sort(a7, SortBase.DESC);
+        sort.Sort heapSort = new sort.HeapSort();
+        heapSort.sort(a7, sort.SortBase.DESC);
 
-        Sort countSort = new CountSort();
-        countSort.sort(a8, SortBase.DESC);
+        sort.Sort countSort = new sort.CountSort();
+        countSort.sort(a8, sort.SortBase.DESC);
 
-        Sort radixSort = new RadixSort();
-        radixSort.sort(a9, SortBase.DESC);
+        sort.Sort radixSort = new sort.RadixSort();
+        radixSort.sort(a9, sort.SortBase.DESC);
 
-        SortBase.printArray(a1);
+        sort.SortBase.printArray(a1);
         System.out.println();
 
-        SortBase.printArray(a2);
+        sort.SortBase.printArray(a2);
         System.out.println();
 
-        SortBase.printArray(a3);
+        sort.SortBase.printArray(a3);
         System.out.println();
 
-        SortBase.printArray(a4);
+        sort.SortBase.printArray(a4);
         System.out.println();
 
-        SortBase.printArray(a5);
+        sort.SortBase.printArray(a5);
         System.out.println();
 
-        SortBase.printArray(a6);
+        sort.SortBase.printArray(a6);
         System.out.println();
 
-        SortBase.printArray(a7);
+        sort.SortBase.printArray(a7);
         System.out.println();
 
-        SortBase.printArray(a8);
+        sort.SortBase.printArray(a8);
         System.out.println();
 
-        SortBase.printArray(a9);
+        sort.SortBase.printArray(a9);
     }
 }

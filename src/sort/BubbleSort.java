@@ -1,7 +1,7 @@
 package sort;
 
 //冒泡排序
-public class BubbleSort extends SortBase{
+public class BubbleSort extends sort.SortBase {
     @Override
     public void sort(int[] a) {
         sort(a,ASC);
