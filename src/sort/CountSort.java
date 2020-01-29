@@ -13,6 +13,8 @@ public class CountSort extends SortBase {
 
     @Override
     public void sort(int[] a, String order) {
+        checkOrder(order);
+
         int[] count = count(a);
         int sum = 0;
         int length = a.length;
@@ -39,5 +41,6 @@ public class CountSort extends SortBase {
         }
         return count;
     }
+
 
 }

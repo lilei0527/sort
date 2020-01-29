@@ -10,6 +10,8 @@ public class HeapSort extends SortBase {
 
     @Override
     public void sort(int[] a, String order) {
+        checkOrder(order);
+
         int len = a.length;
         buildMaxHeap(a, len, order);
         for (int i = len - 1; i > 0; i--) {

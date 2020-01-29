@@ -51,6 +51,8 @@ public class QuickSort extends SortBase {
 
     @Override
     public void sort(int[] a, String order) {
+        checkOrder(order);
+
         sort(a, 0, a.length - 1, order);
     }
 }

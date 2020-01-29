@@ -9,6 +9,8 @@ public class ShellSort extends SortBase {
 
     @Override
     public void sort(int[] a, String order) {
+        checkOrder(order);
+
         int gap = getGap(a.length);
         int key, i, j;
         while (gap > 0) {

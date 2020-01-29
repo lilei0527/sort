@@ -16,6 +16,8 @@ public class MergeSort extends SortBase {
     }
 
     private int[] mergeSort(int[] a, String order) {
+        checkOrder(order);
+
         if (a.length < 2) {
             return a;
         }

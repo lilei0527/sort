@@ -10,6 +10,8 @@ public class RadixSort extends SortBase {
 
     @Override
     public void sort(int[] a, String order) {
+        checkOrder(order);
+
         int max = getMax(a);
         int digit = 1;
         while ((max = max / 10) != 0) {

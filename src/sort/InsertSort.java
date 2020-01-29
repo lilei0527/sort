@@ -9,6 +9,8 @@ public class InsertSort extends SortBase {
 
     @Override
     public void sort(int[] a, String order) {
+        checkOrder(order);
+
         int i, j, key;
         for (i = 1; i < a.length; i++) {
             j = i - 1;

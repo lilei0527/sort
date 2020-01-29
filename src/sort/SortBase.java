@@ -44,7 +44,6 @@ public abstract class SortBase implements Sort {
     public abstract void sort(int[] a, String order);
 
     void swap(int left, int right, int[] a, String order) {
-        checkOrder(order);
 
         if ((order.equals(DESC) && a[left] < a[right]) || (order.equals(ASC) && a[left] > a[right])) {
             swap(left, right, a);
@@ -58,12 +57,12 @@ public abstract class SortBase implements Sort {
         a[right] = temp;
     }
 
-    private void checkOrder(String order) {
+    void checkOrder(String order) {
         if (!order.equals(ASC) && !order.equals(DESC)) {
             try {
-                throw new ParamInvalidException();
+                throw new ParamInvalidException("排序参数不合法");
             } catch (ParamInvalidException e) {
-                System.out.println("排序参数不合法");
+                throw e;
             }
         }
     }
