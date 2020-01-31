@@ -59,11 +59,7 @@ public abstract class SortBase implements Sort {
 
     void checkOrder(String order) {
         if (!order.equals(ASC) && !order.equals(DESC)) {
-            try {
-                throw new ParamInvalidException("排序参数不合法");
-            } catch (ParamInvalidException e) {
-                throw e;
-            }
+            throw new ParamInvalidException("排序参数不合法");
         }
     }
 
