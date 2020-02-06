@@ -70,7 +70,7 @@ public abstract class SortBase implements Sort {
     }
 
     void reverseOrder(int[] n) {
-        int reverse[] = new int[n.length];
+        int[] reverse = new int[n.length];
         for (int i = 0; i < reverse.length; i++) {
             reverse[i] = n[reverse.length - 1 - i];
         }
