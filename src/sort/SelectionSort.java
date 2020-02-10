@@ -3,7 +3,7 @@ package sort;
 //选择排序
 public class SelectionSort extends SortBase {
     public void sort(int[] a) {
-        sort(a, "11");
+        sort(a, ASC);
     }
 
     @Override
