@@ -18,15 +18,16 @@ public class CountSort extends SortBase {
         int[] count = count(a);
         int sum = 0;
         int length = a.length;
+        int min = getMin(a);
         for (int i = 0; i < count.length; i++) {
             while (count[i]-- != 0) {
 
                 if (order.equals(ASC)) {
-                    a[sum++] = i + getMin(a);
+                    a[sum++] = i + min;
                 }
 
                 if (order.equals(DESC)) {
-                    a[--length] = i + getMin(a);
+                    a[--length] = i + min;
                 }
             }
         }
@@ -34,9 +35,10 @@ public class CountSort extends SortBase {
 
     //维护一个存储元素出现次数的数组
     private int[] count(int[] a) {
-        int[] count = new int[getMax(a) - getMin(a) + 1];
+        int min  = getMin(a);
+        int[] count = new int[getMax(a) - min + 1];
         for (int i : a) {
-            int dv = i - getMin(a);
+            int dv = i - min;
             count[dv]++;
         }
         return count;
