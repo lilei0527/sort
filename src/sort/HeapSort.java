@@ -22,7 +22,7 @@ public class HeapSort extends SortBase {
     }
 
     private void buildMaxHeap(int[] a, int len, String order) {
-        for (int i = (int) Math.floor(len / 2); i >= 0; i--) {
+        for (int i = len/2; i >= 0; i--) {
             heap(a, i, len, order);
         }
     }
@@ -48,7 +48,6 @@ public class HeapSort extends SortBase {
         if (right < len && a[right] < a[bound] && order.equals(DESC)) {
             bound = right;
         }
-
 
         if (bound != i) {
             swap(i, bound, a);
