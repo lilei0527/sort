@@ -3,7 +3,13 @@ package sort;
 
 import java.util.Arrays;
 
-//归并排序
+/**
+ * @author lilei
+ * 归并排序
+ * 稳定性：稳定
+ * 时间复杂度：O(nlogn)
+ * 空间复杂度：O(n)
+ **/
 public class MergeSort extends SortBase {
     @Override
     public void sort(int[] a) {
@@ -20,7 +26,7 @@ public class MergeSort extends SortBase {
 
         if (a.length < 2) {
             return a;
-        }
+    }
         int mid = a.length / 2;
         int[] left = Arrays.copyOfRange(a, 0, mid);
         int[] right = Arrays.copyOfRange(a, mid, a.length);

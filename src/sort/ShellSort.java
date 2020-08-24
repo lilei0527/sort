@@ -1,6 +1,12 @@
 package sort;
 
-//希尔排序
+/**
+ * @author lilei
+ * 希尔排序
+ * 稳定性：不稳定
+ * 时间复杂度：O(n^(1.3-2))
+ * 空间复杂度：O(1)
+ **/
 public class ShellSort extends SortBase {
     @Override
     public void sort(int[] a) {
@@ -33,7 +39,7 @@ public class ShellSort extends SortBase {
                 }
                 a[j + gap] = key;
             }
-            gap = (int) Math.floor(gap / 2);
+            gap = (int) Math.floor(gap >> 1);
         }
     }
 

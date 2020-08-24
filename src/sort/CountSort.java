@@ -1,9 +1,15 @@
 package sort;
 
-//计数排序
+
+/**
+ * @author lilei
+ * 计数排序
+ * 稳定性：稳定
+ * 时间复杂度：O(n+k)  k为a[]的最大最小值的差值
+ * 空间复杂度：O(k)    要申请大小为k的数组空间
+ * 试用场景：只能为整数排序，并且有额外的空间开销，当k很大时算法的时间复杂度和空间复杂度都会上升，只适用于k很小的情形
+ **/
 public class CountSort extends SortBase {
-
-
 
 
     @Override
@@ -35,7 +41,7 @@ public class CountSort extends SortBase {
 
     //维护一个存储元素出现次数的数组
     private int[] count(int[] a) {
-        int min  = getMin(a);
+        int min = getMin(a);
         int[] count = new int[getMax(a) - min + 1];
         for (int i : a) {
             int dv = i - min;

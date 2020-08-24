@@ -1,6 +1,12 @@
 package sort;
 
-//快速排序
+/**
+ * @author lilei
+ * 快速排序
+ * 稳定性：不稳定
+ * 时间复杂度：O(nlogn)
+ * 空间复杂度：O(logn)
+ **/
 public class QuickSort extends SortBase {
 
 

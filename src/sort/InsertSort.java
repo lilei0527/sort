@@ -1,6 +1,12 @@
 package sort;
 
-//插入排序
+/**
+ * @author lilei
+ * 插入排序
+ * 稳定性：稳定
+ * 时间复杂度：O(n^2)
+ * 空间复杂度：O(1)
+ **/
 public class InsertSort extends SortBase {
     @Override
     public void sort(int[] a) {

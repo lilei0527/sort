@@ -1,6 +1,12 @@
 package sort;
 
-//选择排序
+/**
+ * @author lilei
+ * 选择排序
+ * 稳定性：不稳定
+ * 时间复杂度：O(n^2)
+ * 空间复杂度：O(1)
+ **/
 public class SelectionSort extends SortBase {
     public void sort(int[] a) {
         sort(a, ASC);

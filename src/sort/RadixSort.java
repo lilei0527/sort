@@ -1,7 +1,13 @@
 package sort;
 
 
-//基数排序
+/**
+ * @author lilei
+ * 基数排序
+ * 稳定性：稳定
+ * 时间复杂度：O(n*k)
+ * 空间复杂度：O(n+k)
+ **/
 public class RadixSort extends SortBase {
     @Override
     public void sort(int[] a) {
@@ -62,7 +68,7 @@ public class RadixSort extends SortBase {
 
 
     //合并成行数组
-    private void merge(int[][] a, int[] merge, int order[]) {
+    private void merge(int[][] a, int[] merge, int[] order) {
         int sum = 0;
         for (int i = 0; i < a.length; i++) {
             if (order[i] != 0) {

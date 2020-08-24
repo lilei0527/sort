@@ -2,6 +2,13 @@ package sort;
 
 
 //堆排序
+/**
+* @author lilei
+ * 堆排序
+ * 稳定性：不稳定
+ * 时间复杂度：O(nlogn)
+ * 空间复杂度：O(1)
+**/
 public class HeapSort extends SortBase {
     @Override
     public void sort(int[] a) {
@@ -21,6 +28,7 @@ public class HeapSort extends SortBase {
         }
     }
 
+    //时间复杂度为O(n)
     private void buildMaxHeap(int[] a, int len, String order) {
         for (int i = len/2; i >= 0; i--) {
             heap(a, i, len, order);
