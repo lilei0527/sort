@@ -5,8 +5,8 @@ package sort;
  * @author lilei
  * 基数排序
  * 稳定性：稳定
- * 时间复杂度：O(n*k)
- * 空间复杂度：O(n+k)
+ * 时间复杂度：O(d(n+r))，r为关键字的范围，d为堆数
+ * 空间复杂度：O(d(n+r))
  **/
 public class RadixSort extends SortBase {
     @Override
@@ -35,14 +35,7 @@ public class RadixSort extends SortBase {
 
         int[][] radix = new int[10][a.length];
         int[] order = new int[a.length];
-        if (n == 1) {
-            for (int i : a) {
-                radix[i % 10][order[i % 10]++] = i;
-            }
-        }
 
-
-        if (n > 1) {
             for (int i : a) {
                 int point = i;
                 int k = n;
@@ -55,7 +48,6 @@ public class RadixSort extends SortBase {
                 }
                 radix[point][order[point]++] = i;
             }
-        }
 
         merge(radix, a, order);
 
