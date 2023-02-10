@@ -52,7 +52,7 @@ public class QuickSort extends SortBase {
 
     @Override
     public void sort(int[] a) {
-        sort(a, 0, a.length - 1, ASC);
+        sort(a,  ASC);
     }
 
     @Override
